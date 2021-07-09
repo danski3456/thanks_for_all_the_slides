@@ -18,7 +18,7 @@ pandoc \
 	-d params.yaml \
 	-s \
 	-o "$output" \
-	-V revealjs-url=./reveal.js \
+	-V revealjs-url=https://raw.githubusercontent.com/danski3456/thanks_for_all_the_slides/main/reveal.js \
 	--mathjax \
 	"$1" \
 
