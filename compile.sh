@@ -23,9 +23,8 @@ pandoc \
 	"$1" \
 
 ## Show all lists one by one
-sed -i "" \
-    -E "s/(class=\"fragment)/\1 fade-in-then-semi-out/g" \
-    "$output"
+sed -E "s/(class=\"fragment)/\1 fade-in-then-semi-out/g" \
+    "$output" > "final.html"
 
 # rm -rf mermaid-images/
 
