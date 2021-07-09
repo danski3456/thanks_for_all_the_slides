@@ -13,8 +13,11 @@ jobs:
         with:
           python-version: '3.8.8' 
           architecture: 'x64'
-      - name: Install pandoc
-        run: sudo apt-get install pandoc
+      - uses: r-lib/actions/setup-pandoc@v1
+        with:
+          pandoc-version: '2.14.0.3' # The pandoc version to download (if necessary) and use.
+      # - name: Install pandoc
+      #   run: sudo apt-get install pandoc
       - run: echo $(pandoc --version)
       - name: Pip install
         run: pip install \
