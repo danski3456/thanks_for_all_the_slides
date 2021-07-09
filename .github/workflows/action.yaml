@@ -13,8 +13,15 @@ jobs:
         with:
           python-version: '3.8.8' 
           architecture: 'x64'
+      - name: Install pandoc
+        run: sudo apt-get install pandoc
       - name: Pip install
-        run: pip install pantable
+        run: pip install \
+          pantable \
+          "pandocfilters==1.4.3" \
+          "pandoc-mermaid-filter==0.1.0"
+      - name: Converting the slide to html
+        run: ./compile.sh slide.md
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository

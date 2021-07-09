@@ -1,0 +1,19 @@
+to: revealjs
+incremental: true
+
+template: template.revealjs
+slide-level: 3
+
+metadata:
+  slideNumber: true
+  controls: true
+  width: "'100%'"
+  height: "'100%'"
+  theme: simple 
+  author:
+    - Diego Kiedanski
+
+filters:
+- pantable
+# - type: json
+#   path: utils/mermaid-filter.py 
