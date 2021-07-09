@@ -15,6 +15,7 @@ jobs:
           architecture: 'x64'
       - name: Install pandoc
         run: sudo apt-get install pandoc
+      - run: echo $(pandoc --version)
       - name: Pip install
         run: pip install \
           pantable \
